@@ -1,4 +1,4 @@
-package br.com.shai.pet_tech;
+package br.com.shai.pet_tech.entities;
 
 import jakarta.persistence.*;
 
@@ -17,7 +17,7 @@ public class Produto {
 
     private String descricao;
 
-    private String preco;
+    private double preco;
 
     private String urlDaImagem;
 
@@ -25,7 +25,7 @@ public class Produto {
 
     }
 
-    public Produto(UUID id, String nome, String descricao, String preco, String urlDaImagem) {
+    public Produto(UUID id, String nome, String descricao, double preco, String urlDaImagem) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -57,11 +57,11 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public String getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(String preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 
